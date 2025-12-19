@@ -1,0 +1,75 @@
+# Node modules
+frontend/node_modules
+node_modules
+
+# Python cache
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.Python
+backend/__pycache__
+
+# Virtual environments
+.venv
+venv
+ENV
+env
+
+# Build artifacts
+frontend/build
+frontend/.cache
+
+# Development files
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+backend/*.log
+
+# Documentation
+*.md
+!README.md
+
+# Scripts
+start*.ps1
+start*.sh
+start*.bat
+deploy.sh
+
+# Test files
+tests
+**/*.test.js
+**/*.spec.js
+
+# Credentials
+credentials
+*.json
+!package*.json
+
+# Database files (if local)
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp
+temp
+
+

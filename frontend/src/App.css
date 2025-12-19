@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide Scrollbar but Keep Scroll Functionality */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Ensure scroll functionality still works */
+.overflow-x-auto,
+.overflow-y-auto,
+.overflow-auto {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.overflow-x-auto::-webkit-scrollbar,
+.overflow-y-auto::-webkit-scrollbar,
+.overflow-auto::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Transitions */
+button,
+a,
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* Prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Milestones header colors */
+.header-orange .ag-header-group-cell-label {
+  background: #f59e0b;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+.header-blue .ag-header-cell-label {
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* AG Grid horizontal scrollbar full stretch */
+.ag-body-horizontal-scroll {
+  width: 100% !important;
+  right: 0 !important;
+}
+
+/* Remove right-side clipping line so last column is fully visible */
+.ag-root,
+.ag-root-wrapper,
+.ag-root-wrapper-body {
+  border-right: 0 !important;
+}
+
+/* Remove any divider visual for spacer */
+.no-divider {
+  border-right: 0 !important;
+}
+
+/* Allow header text wrapping for specific columns */
+.wrap-header .ag-header-cell-text {
+  white-space: normal !important;
+  line-height: 1.2;
+}
+
+.no-wrap-header .ag-header-cell-text {
+  white-space: nowrap !important;
+}
+
+/* Stronger blue header styling for sub-columns */
+.header-blue .ag-header-cell-text {
+  color: #0b1b37 !important;
+}
+.header-blue .ag-header-cell-label {
+  background-color: #60a5fa !important; /* blue-400 */
+  color: #ffffff !important;
+  padding: 8px 12px; /* larger padding for taller/wider pill */
+  min-height: 40px; /* increase height */
+  border-radius: 8px;
+}
+
+/* Prevent awkward word breaks in wrapped headers */
+.wrap-header .ag-header-cell-text {
+  word-break: keep-all;
+}
+
+/* Ensure no invisible right spacer shortens the scrollable width */
+.ag-horizontal-right-spacer,
+.ag-horizontal-left-spacer {
+  width: 0 !important;
+  min-width: 0 !important;
+  display: none !important;
+}
+
+/* Let center viewport show full width and content decide min width */
+.ag-center-cols-viewport {
+  overflow-x: visible !important;
+}
+.ag-center-cols-container {
+  min-width: max-content !important;
+}
+
+/* Ensure clipper does not crop last columns */
+.ag-center-cols-clipper {
+  min-width: max-content !important;
+}
+
+/* Make the main body viewport provide the horizontal scrollbar */
+.ag-body-viewport {
+  overflow-x: auto !important;
+  overflow-y: auto;
+}
+.ag-body-horizontal-scroll-viewport {
+  width: 100% !important;
+}
+
+/* Make AG Grid columns more compact globally */
+.ag-theme-alpine {
+  --ag-font-size: 12px;
+  --ag-cell-horizontal-padding: 4px;
+  --ag-header-foreground-color: #0f172a;
+  --ag-header-height: 32px;
+}

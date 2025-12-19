@@ -1,0 +1,40 @@
+# ============================================================================
+# Google Cloud Run Deployment Configuration (Example)
+# ============================================================================
+# Copy this file to deploy.config and update with your values
+# Then source it before running deploy.sh:
+#
+#   source deploy.config
+#   ./deploy.sh
+#
+# Or export variables directly:
+#
+#   export PROJECT_ID=my-gcp-project
+#   export REGION=us-central1
+#   export SERVICE_NAME=tanti-app
+#   ./deploy.sh
+# ============================================================================
+
+# Required: Your GCP Project ID
+export PROJECT_ID=your-gcp-project-id
+
+# Optional: Cloud Run region (default: us-central1)
+export REGION=us-central1
+
+# Optional: Cloud Run service name (default: tanti-app)
+export SERVICE_NAME=tanti-app
+
+# ============================================================================
+# Common Regions:
+# ============================================================================
+# - us-central1 (Iowa)
+# - us-east1 (South Carolina)
+# - us-west1 (Oregon)
+# - europe-west1 (Belgium)
+# - asia-south1 (Mumbai)
+# - asia-southeast1 (Singapore)
+#
+# Full list: https://cloud.google.com/run/docs/locations
+# ============================================================================
+
+
